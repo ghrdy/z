@@ -13,6 +13,7 @@ import ProfileScreen from "./src/screens/ProfileScreen";
 import ContactsScreen from "./src/screens/ContactsScreen";
 import MessagesScreen from "./src/screens/MessagesScreen";
 import ChatScreen from "./src/screens/ChatScreen";
+import SettingsScreen from "./src/screens/SettingsScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -73,8 +74,13 @@ export default function App() {
             name="Chat"
             component={ChatScreen}
             options={({ route }) => ({
-              title: route.params.contactName
+              title: route.params.contactName,
             })}
+          />
+          <Stack.Screen
+            name="Settings"
+            component={SettingsScreen}
+            options={{ title: "Parametres" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
