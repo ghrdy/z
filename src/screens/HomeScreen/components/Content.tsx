@@ -1,17 +1,20 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { COLORS } from "../../../constants/colors";
 
 export function Content() {
   return (
     <View style={styles.content}>
       <View style={styles.welcomeContainer}>
-        <Image
-          source={require("../../../assets/logo.png")}
-          style={styles.logo}
-          tintColor="#E5E5E5"
+        <MaterialCommunityIcons
+          name="run-fast"
+          size={80}
+          color={COLORS.primary}
         />
+        <Text style={styles.appName}>Unify</Text>
         <Text style={styles.welcomeText}>
-          Bonjour <Text style={styles.username}>John</Text>
+          Bienvenue, <Text style={styles.username}>John</Text>
         </Text>
       </View>
     </View>
@@ -28,17 +31,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 16,
   },
-  logo: {
-    width: 150,
-    height: 150,
-    resizeMode: "contain",
+  appName: {
+    fontSize: 36,
+    fontWeight: "bold",
+    color: COLORS.primary,
+    marginTop: 8,
   },
   welcomeText: {
     fontSize: 24,
-    color: "#666",
+    color: COLORS.textLight,
   },
   username: {
     fontWeight: "600",
-    color: "#333",
+    color: COLORS.text,
   },
 });
