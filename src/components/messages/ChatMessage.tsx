@@ -1,23 +1,25 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { ChatMessage as ChatMessageType } from '../../types/message';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { ChatMessage as ChatMessageType } from "../../types/message";
+import { COLORS } from "../../constants/colors";
 
 interface ChatMessageProps {
   message: ChatMessageType;
 }
 
 export function ChatMessage({ message }: ChatMessageProps) {
-  const isOwnMessage = message.senderId === 'currentUser';
+  const isOwnMessage = message.senderId === "currentUser";
 
   return (
-    <View style={[
-      styles.container,
-      isOwnMessage ? styles.ownMessage : styles.otherMessage
-    ]}>
-      <Text style={[
-        styles.text,
-        isOwnMessage ? styles.ownText : styles.otherText
-      ]}>
+    <View
+      style={[
+        styles.container,
+        isOwnMessage ? styles.ownMessage : styles.otherMessage,
+      ]}
+    >
+      <Text
+        style={[styles.text, isOwnMessage ? styles.ownText : styles.otherText]}
+      >
         {message.content}
       </Text>
       <Text style={styles.time}>{message.time}</Text>
@@ -27,32 +29,32 @@ export function ChatMessage({ message }: ChatMessageProps) {
 
 const styles = StyleSheet.create({
   container: {
-    maxWidth: '80%',
+    maxWidth: "80%",
     marginBottom: 12,
     padding: 12,
     borderRadius: 16,
   },
   ownMessage: {
-    alignSelf: 'flex-end',
-    backgroundColor: '#65adf1',
+    alignSelf: "flex-end",
+    backgroundColor: COLORS.primary,
   },
   otherMessage: {
-    alignSelf: 'flex-start',
-    backgroundColor: '#f0f0f0',
+    alignSelf: "flex-start",
+    backgroundColor: COLORS.backgroundLight,
   },
   text: {
     fontSize: 16,
   },
   ownText: {
-    color: 'white',
+    color: COLORS.background,
   },
   otherText: {
-    color: 'black',
+    color: COLORS.text,
   },
   time: {
     fontSize: 12,
-    color: '#666',
+    color: COLORS.textLight,
     marginTop: 4,
-    textAlign: 'right',
+    textAlign: "right",
   },
 });

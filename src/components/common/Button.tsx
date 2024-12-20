@@ -1,6 +1,7 @@
-import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React from "react";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { COLORS } from "../../constants/colors";
 
 interface ButtonProps {
   title: string;
@@ -19,16 +20,16 @@ export function Button({ title, onPress, icon }: ButtonProps) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#65adf1',
+    backgroundColor: COLORS.primary,
     padding: 16,
     borderRadius: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 12,
   },
   text: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });

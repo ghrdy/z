@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "RunSocial",
-    "slug": "runsocial",
+    "name": "Unify",
+    "slug": "Unify",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -17,8 +17,8 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "RunSocial needs access to location to show nearby runners.",
-        "NSLocationAlwaysUsageDescription": "RunSocial needs access to location to show nearby runners."
+        "NSLocationWhenInUseUsageDescription": "Unify needs access to location to show nearby runners.",
+        "NSLocationAlwaysUsageDescription": "Unify needs access to location to show nearby runners."
       },
       "config": {
         "googleMapsApiKey": "YOUR_IOS_GOOGLE_MAPS_API_KEY"
@@ -43,7 +43,7 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow RunSocial to access your location"
+          "locationAlwaysAndWhenInUsePermission": "Allow Unify to access your location"
         }
       ]
     ]

@@ -2,7 +2,9 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Activity } from "../../types/activity";
+import { COLORS } from "../../constants/colors";
 import { formatDistance } from "../../utils/format";
+
 interface ActivityStatsProps {
   activity: Activity;
 }
@@ -30,7 +32,11 @@ interface StatItemProps {
 function StatItem({ icon, label, value }: StatItemProps) {
   return (
     <View style={styles.statItem}>
-      <MaterialCommunityIcons name={icon as any} size={20} color="#65adf1" />
+      <MaterialCommunityIcons
+        name={icon as any}
+        size={20}
+        color={COLORS.primary}
+      />
       <Text style={styles.label}>{label}</Text>
       <Text style={styles.value}>{value}</Text>
     </View>
@@ -47,7 +53,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 12,
-    color: "#666",
+    color: COLORS.textLight,
     marginTop: 4,
   },
   value: {

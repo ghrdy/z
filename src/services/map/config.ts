@@ -11,8 +11,8 @@ export const GOOGLE_MAPS_CONFIG = {
 };
 
 export const MAP_STYLES = {
-  SELECTED_MARKER: '#65adf1',
+  SELECTED_MARKER: '#E83D4D',
   DEFAULT_MARKER: '#666',
-  ZONE_FILL_COLOR: 'rgba(101, 173, 241, 0.2)',
-  ZONE_STROKE_COLOR: '#65adf1',
+  ZONE_FILL_COLOR: 'rgba(232, 61, 77, 0.2)',
+  ZONE_STROKE_COLOR: '#E83D4D',
 };

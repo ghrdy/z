@@ -33,7 +33,7 @@ export default function App() {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{ title: "RunSocial" }}
+            options={{ title: "Unify" }}
           />
           <Stack.Screen
             name="Map"

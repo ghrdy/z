@@ -1,19 +1,19 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { RootStackParamList } from "./types/navigation";
+import { RootStackParamList } from "./src/types/navigation";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import HomeScreen from "./screens/HomeScreen";
-import MapScreen from "./screens/MapScreen";
-import ActivitiesScreen from "./screens/ActivitiesScreen";
-import ActivityDetailScreen from "./screens/ActivityDetailScreen";
-import EventsScreen from "./screens/EventsScreen";
-import ProfileScreen from "./screens/ProfileScreen";
-import SettingsScreen from "./screens/SettingsScreen";
-import ContactsScreen from "./screens/ContactsScreen";
-import MessagesScreen from "./screens/MessagesScreen";
-import ChatScreen from "./screens/ChatScreen";
+import HomeScreen from "./src/screens/HomeScreen";
+import MapScreen from "./src/screens/MapScreen";
+import ActivitiesScreen from "./src/screens/ActivitiesScreen";
+import ActivityDetailScreen from "./src/screens/ActivityDetailScreen";
+import EventsScreen from "./src/screens/EventsScreen";
+import ProfileScreen from "./src/screens/ProfileScreen";
+import ContactsScreen from "./src/screens/ContactsScreen";
+import MessagesScreen from "./src/screens/MessagesScreen";
+import ChatScreen from "./src/screens/ChatScreen";
+import SettingsScreen from "./src/screens/SettingsScreen";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -25,7 +25,7 @@ export default function App() {
           initialRouteName="Home"
           screenOptions={{
             headerStyle: {
-              backgroundColor: "#65adf1",
+              backgroundColor: "#E83D4D",
             },
             headerTintColor: "white",
           }}
@@ -33,7 +33,7 @@ export default function App() {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{ title: "RunSocial" }}
+            options={{ title: "Unify" }}
           />
           <Stack.Screen
             name="Map"
@@ -61,11 +61,6 @@ export default function App() {
             options={{ title: "Mon Profil" }}
           />
           <Stack.Screen
-            name="Settings"
-            component={SettingsScreen}
-            options={{ title: "Paramètres" }}
-          />
-          <Stack.Screen
             name="Contacts"
             component={ContactsScreen}
             options={{ title: "Contacts" }}
@@ -81,6 +76,11 @@ export default function App() {
             options={({ route }) => ({
               title: route.params.contactName,
             })}
+          />
+          <Stack.Screen
+            name="Settings"
+            component={SettingsScreen}
+            options={{ title: "Parametres" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
