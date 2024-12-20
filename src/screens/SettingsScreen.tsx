@@ -16,7 +16,7 @@ export default function SettingsScreen() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#65adf1" />
+        <ActivityIndicator size="large" color="#E83D4D" />
       </View>
     );
   }
@@ -31,7 +31,7 @@ export default function SettingsScreen() {
             <MaterialCommunityIcons
               name="account-group"
               size={24}
-              color="#65adf1"
+              color="#E83D4D"
             />
             <Text style={styles.settingTitle}>Recherche par genre</Text>
           </View>
@@ -41,7 +41,7 @@ export default function SettingsScreen() {
           <Switch
             value={settings.sameGenderOnly}
             onValueChange={(value) => updateSetting("sameGenderOnly", value)}
-            trackColor={{ false: "#767577", true: "#65adf1" }}
+            trackColor={{ false: "#767577", true: "#E83D4D" }}
           />
         </View>
 
@@ -50,7 +50,7 @@ export default function SettingsScreen() {
             <MaterialCommunityIcons
               name="map-marker-radius"
               size={24}
-              color="#65adf1"
+              color="#E83D4D"
             />
             <Text style={styles.settingTitle}>Masquer ma position exacte</Text>
           </View>
@@ -60,7 +60,7 @@ export default function SettingsScreen() {
           <Switch
             value={settings.hideExactLocation}
             onValueChange={(value) => updateSetting("hideExactLocation", value)}
-            trackColor={{ false: "#767577", true: "#65adf1" }}
+            trackColor={{ false: "#767577", true: "#E83D4D" }}
           />
         </View>
       </View>
@@ -73,7 +73,7 @@ export default function SettingsScreen() {
             <MaterialCommunityIcons
               name="speedometer"
               size={24}
-              color="#65adf1"
+              color="#E83D4D"
             />
             <Text style={styles.settingTitle}>Allure similaire</Text>
           </View>
@@ -84,7 +84,7 @@ export default function SettingsScreen() {
           <Switch
             value={settings.similarPaceOnly}
             onValueChange={(value) => updateSetting("similarPaceOnly", value)}
-            trackColor={{ false: "#767577", true: "#65adf1" }}
+            trackColor={{ false: "#767577", true: "#E83D4D" }}
           />
         </View>
 
@@ -93,7 +93,7 @@ export default function SettingsScreen() {
             <MaterialCommunityIcons
               name="clock-outline"
               size={24}
-              color="#65adf1"
+              color="#E83D4D"
             />
             <Text style={styles.settingTitle}>Horaires similaires</Text>
           </View>
@@ -103,7 +103,7 @@ export default function SettingsScreen() {
           <Switch
             value={settings.similarSchedule}
             onValueChange={(value) => updateSetting("similarSchedule", value)}
-            trackColor={{ false: "#767577", true: "#65adf1" }}
+            trackColor={{ false: "#767577", true: "#E83D4D" }}
           />
         </View>
       </View>
@@ -116,7 +116,7 @@ export default function SettingsScreen() {
             <MaterialCommunityIcons
               name="bell-outline"
               size={24}
-              color="#65adf1"
+              color="#E83D4D"
             />
             <Text style={styles.settingTitle}>Coureurs à proximité</Text>
           </View>
@@ -129,7 +129,7 @@ export default function SettingsScreen() {
             onValueChange={(value) =>
               updateSetting("nearbyRunnersNotifications", value)
             }
-            trackColor={{ false: "#767577", true: "#65adf1" }}
+            trackColor={{ false: "#767577", true: "#E83D4D" }}
           />
         </View>
       </View>

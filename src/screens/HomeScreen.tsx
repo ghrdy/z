@@ -44,7 +44,7 @@ export default function HomeScreen() {
           onPress={() => navigation.navigate("Map")}
         >
           <MaterialCommunityIcons name="map" size={24} color="#000" />
-          <Text style={styles.navText}>Cartes</Text>
+          <Text style={styles.navText}>Carte</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
