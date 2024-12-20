@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 interface RunnerStatsProps {
   pace: string;
@@ -11,7 +11,11 @@ export function RunnerStats({ pace, distance }: RunnerStatsProps) {
   return (
     <View style={styles.stats}>
       <StatItem icon="speedometer" label="Allure moyenne" value={pace} />
-      <StatItem icon="map-marker-distance" label="Distance" value={`${distance} km`} />
+      <StatItem
+        icon="map-marker-distance"
+        label="Distance"
+        value={`${distance} km`}
+      />
     </View>
   );
 }
@@ -25,7 +29,7 @@ interface StatItemProps {
 function StatItem({ icon, label, value }: StatItemProps) {
   return (
     <View style={styles.statItem}>
-      <MaterialCommunityIcons name={icon as any} size={24} color="#65adf1" />
+      <MaterialCommunityIcons name={icon as any} size={24} color="#E83D4D" />
       <Text style={styles.statLabel}>{label}</Text>
       <Text style={styles.statValue}>{value}</Text>
     </View>
@@ -34,21 +38,21 @@ function StatItem({ icon, label, value }: StatItemProps) {
 
 const styles = StyleSheet.create({
   stats: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    justifyContent: "space-around",
     marginBottom: 24,
   },
   statItem: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   statLabel: {
     fontSize: 12,
-    color: '#666',
+    color: "#666",
     marginTop: 4,
   },
   statValue: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     marginTop: 2,
   },
 });

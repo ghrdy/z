@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import MapView, { Circle } from 'react-native-maps';
-import { Location } from '../../types/location';
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import MapView, { Circle } from "react-native-maps";
+import { Location } from "../../types/location";
 
 interface MapOverlayProps {
   location: Location;
@@ -17,7 +17,7 @@ export function MapOverlay({ location, radius, visible }: MapOverlayProps) {
       center={location}
       radius={radius * 1000} // Convert km to meters
       fillColor="rgba(101, 173, 241, 0.2)"
-      strokeColor="#65adf1"
+      strokeColor="#E83D4D"
       strokeWidth={2}
     />
   );

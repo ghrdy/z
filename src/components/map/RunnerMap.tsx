@@ -96,7 +96,7 @@ export const RunnerMap = forwardRef<MapView, RunnerMapProps>(
                         <MaterialCommunityIcons
                           name="chevron-right"
                           size={20}
-                          color="#65adf1"
+                          color="#E83D4D"
                         />
                       </TouchableOpacity>
                     </View>

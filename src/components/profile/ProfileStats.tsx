@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { ProfileStats as ProfileStatsType } from '../../types/profile';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { ProfileStats as ProfileStatsType } from "../../types/profile";
 
 interface ProfileStatsProps {
   stats: ProfileStatsType;
@@ -46,7 +46,7 @@ interface StatItemProps {
 function StatItem({ icon, label, value }: StatItemProps) {
   return (
     <View style={styles.statItem}>
-      <MaterialCommunityIcons name={icon as any} size={24} color="#65adf1" />
+      <MaterialCommunityIcons name={icon as any} size={24} color="#E83D4D" />
       <Text style={styles.label}>{label}</Text>
       <Text style={styles.value}>{value}</Text>
     </View>
@@ -55,10 +55,10 @@ function StatItem({ icon, label, value }: StatItemProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 8,
     padding: 16,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -66,30 +66,30 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: "600",
     marginBottom: 16,
   },
   grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
     gap: 16,
   },
   statItem: {
     flex: 1,
-    minWidth: '45%',
-    alignItems: 'center',
+    minWidth: "45%",
+    alignItems: "center",
     padding: 12,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: "#f8f9fa",
     borderRadius: 8,
   },
   label: {
     fontSize: 14,
-    color: '#666',
+    color: "#666",
     marginTop: 8,
   },
   value: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     marginTop: 4,
   },
 });

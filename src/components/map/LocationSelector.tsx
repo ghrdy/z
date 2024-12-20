@@ -27,7 +27,7 @@ export function LocationSelector({
   return (
     <Animated.View style={[styles.container, style]}>
       <View style={styles.addressContainer}>
-        <MaterialCommunityIcons name="map-marker" size={20} color="#65adf1" />
+        <MaterialCommunityIcons name="map-marker" size={20} color="#E83D4D" />
         <Text style={styles.address} numberOfLines={2}>
           {address}
         </Text>
@@ -45,9 +45,9 @@ export function LocationSelector({
             step={0.5}
             value={radius}
             onValueChange={onRadiusChange}
-            minimumTrackTintColor="#65adf1"
+            minimumTrackTintColor="#E83D4D"
             maximumTrackTintColor="#ddd"
-            thumbTintColor="#65adf1"
+            thumbTintColor="#E83D4D"
           />
           <Text style={styles.radiusValue}>{radius} km</Text>
         </View>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   validateButton: {
-    backgroundColor: "#65adf1",
+    backgroundColor: "#E83D4D",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",

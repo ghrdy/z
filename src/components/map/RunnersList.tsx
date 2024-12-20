@@ -99,7 +99,7 @@ export function RunnersList({
                 <MaterialCommunityIcons
                   name="account"
                   size={24}
-                  color={selectedRunner?.id === runner.id ? "#65adf1" : "#666"}
+                  color={selectedRunner?.id === runner.id ? "#E83D4D" : "#666"}
                 />
                 <View>
                   <Text style={styles.runnerName}>{runner.name}</Text>
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   selectedRunnerCard: {
     backgroundColor: "#e6f3ff",
-    borderColor: "#65adf1",
+    borderColor: "#E83D4D",
     borderWidth: 1,
   },
   runnerInfo: {

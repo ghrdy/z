@@ -1,6 +1,6 @@
-import React from 'react';
-import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React from "react";
+import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 interface ConnectButtonProps {
   isConnected: boolean;
@@ -27,28 +27,28 @@ export function ConnectButton({ isConnected, onConnect }: ConnectButtonProps) {
 
 const styles = StyleSheet.create({
   connectButton: {
-    backgroundColor: '#65adf1',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#E83D4D",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     padding: 16,
     borderRadius: 8,
     gap: 8,
   },
   connectButtonText: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   connectedContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     gap: 8,
   },
   connectedText: {
     fontSize: 16,
-    color: '#4CAF50',
-    fontWeight: '600',
+    color: "#4CAF50",
+    fontWeight: "600",
   },
 });

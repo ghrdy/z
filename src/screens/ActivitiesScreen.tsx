@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { View, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import { ActivityCard } from '../components/activities/ActivityCard';
-import { AddActivityModal } from '../components/activities/AddActivityModal';
-import { LiveActivity } from '../components/activities/LiveActivity';
-import { Activity } from '../types/activity';
-import { useActivitiesManager } from '../hooks/useActivitiesManager';
-import { NavigationProp } from '../types/navigation';
+import React, { useState } from "react";
+import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { ActivityCard } from "../components/activities/ActivityCard";
+import { AddActivityModal } from "../components/activities/AddActivityModal";
+import { LiveActivity } from "../components/activities/LiveActivity";
+import { Activity } from "../types/activity";
+import { useActivitiesManager } from "../hooks/useActivitiesManager";
+import { NavigationProp } from "../types/navigation";
 
 export default function ActivitiesScreen() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -16,8 +16,8 @@ export default function ActivitiesScreen() {
   const { activities, addActivity, deleteActivity } = useActivitiesManager();
 
   const handleActivityPress = (activity: Activity) => {
-    navigation.navigate('ActivityDetail', { 
-      activityId: activity.id
+    navigation.navigate("ActivityDetail", {
+      activityId: activity.id,
     });
   };
 
@@ -49,12 +49,12 @@ export default function ActivitiesScreen() {
   };
 
   const calculatePace = (distance: number, duration: string): string => {
-    const [minutes, seconds] = duration.split(':').map(Number);
+    const [minutes, seconds] = duration.split(":").map(Number);
     const totalMinutes = minutes + seconds / 60;
     const pace = totalMinutes / distance;
     const paceMinutes = Math.floor(pace);
     const paceSeconds = Math.round((pace - paceMinutes) * 60);
-    return `${paceMinutes}:${paceSeconds.toString().padStart(2, '0')} min/km`;
+    return `${paceMinutes}:${paceSeconds.toString().padStart(2, "0")} min/km`;
   };
 
   if (isLiveActivityActive) {
@@ -99,24 +99,24 @@ export default function ActivitiesScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
   scrollView: {
     flex: 1,
     padding: 16,
   },
   fab: {
-    position: 'absolute',
+    position: "absolute",
     right: 16,
     bottom: 16,
-    backgroundColor: '#65adf1',
+    backgroundColor: "#E83D4D",
     width: 56,
     height: 56,
     borderRadius: 28,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     elevation: 4,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 4,
