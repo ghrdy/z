@@ -1,6 +1,6 @@
-import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-import Icon from '@expo/vector-icons/MaterialCommunityIcons';
+import React from "react";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 interface NavigationButtonProps {
   title: string;
@@ -21,16 +21,16 @@ export const NavigationButton: React.FC<NavigationButtonProps> = ({
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#65adf1',
+    backgroundColor: "#E83D4D",
     padding: 16,
     borderRadius: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     gap: 12,
   },
   text: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });

@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Modal } from '../common/Modal';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Modal } from "../common/Modal";
 
 interface AddActivityModalProps {
   visible: boolean;
   onClose: () => void;
   onStartLiveActivity: () => void;
-  onAddManualActivity: (activity: { distance: number; duration: string; date: string }) => void;
+  onAddManualActivity: (activity: {
+    distance: number;
+    duration: string;
+    date: string;
+  }) => void;
 }
 
 export function AddActivityModal({
@@ -16,9 +26,9 @@ export function AddActivityModal({
   onStartLiveActivity,
   onAddManualActivity,
 }: AddActivityModalProps) {
-  const [distance, setDistance] = useState('');
-  const [duration, setDuration] = useState('');
-  const [date, setDate] = useState('');
+  const [distance, setDistance] = useState("");
+  const [duration, setDuration] = useState("");
+  const [date, setDate] = useState("");
 
   const handleManualSubmit = () => {
     if (distance && duration && date) {
@@ -33,15 +43,15 @@ export function AddActivityModal({
   };
 
   const resetForm = () => {
-    setDistance('');
-    setDuration('');
-    setDate('');
+    setDistance("");
+    setDuration("");
+    setDate("");
   };
 
   return (
     <Modal visible={visible} onClose={onClose}>
       <Text style={styles.title}>Ajouter une activité</Text>
-      
+
       <TouchableOpacity
         style={styles.liveButton}
         onPress={() => {
@@ -105,49 +115,49 @@ export function AddActivityModal({
 const styles = StyleSheet.create({
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 20,
-    textAlign: 'center',
+    textAlign: "center",
     marginTop: 12,
   },
   subtitle: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     marginBottom: 12,
   },
   liveButton: {
-    backgroundColor: '#65adf1',
+    backgroundColor: "#E83D4D",
     padding: 16,
     borderRadius: 8,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     gap: 8,
   },
   separator: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     marginVertical: 20,
   },
   line: {
     flex: 1,
     height: 1,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: "#e0e0e0",
   },
   separatorText: {
     marginHorizontal: 10,
-    color: '#666',
+    color: "#666",
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: "#ddd",
     borderRadius: 8,
     padding: 12,
     marginBottom: 12,
   },
   buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     gap: 12,
     marginTop: 8,
   },
@@ -155,20 +165,20 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 12,
     borderRadius: 8,
-    alignItems: 'center',
+    alignItems: "center",
   },
   submitButton: {
-    backgroundColor: '#65adf1',
+    backgroundColor: "#E83D4D",
   },
   cancelButton: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: "#f5f5f5",
   },
   buttonText: {
-    color: 'white',
-    fontWeight: '600',
+    color: "white",
+    fontWeight: "600",
   },
   cancelButtonText: {
-    color: '#666',
-    fontWeight: '600',
+    color: "#666",
+    fontWeight: "600",
   },
 });

@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Activity } from '../../types/activity';
-import { ActivityStats } from './ActivityStats';
+import React from "react";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Activity } from "../../types/activity";
+import { ActivityStats } from "./ActivityStats";
 
 interface ActivityCardProps {
   activity: Activity;
@@ -11,17 +11,17 @@ interface ActivityCardProps {
 
 export function ActivityCard({ activity, onPress }: ActivityCardProps) {
   return (
-    <TouchableOpacity 
+    <TouchableOpacity
       style={styles.container}
       onPress={() => onPress(activity)}
     >
       <View style={styles.header}>
         <Text style={styles.date}>{activity.date}</Text>
-        <MaterialCommunityIcons name="run" size={24} color="#65adf1" />
+        <MaterialCommunityIcons name="run" size={24} color="#E83D4D" />
       </View>
-      
+
       <ActivityStats activity={activity} />
-      
+
       <View style={styles.footer}>
         <MaterialCommunityIcons name="chevron-right" size={24} color="#666" />
       </View>
@@ -31,31 +31,31 @@ export function ActivityCard({ activity, onPress }: ActivityCardProps) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 8,
     padding: 16,
     marginBottom: 16,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 2,
   },
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginBottom: 12,
   },
   date: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   footer: {
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 12,
     borderTopWidth: 1,
-    borderTopColor: '#f0f0f0',
+    borderTopColor: "#f0f0f0",
     paddingTop: 12,
   },
 });
