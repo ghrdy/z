@@ -5,13 +5,18 @@ import {
   TouchableOpacity,
   StyleSheet,
   SafeAreaView,
+  Image,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationProp } from "../types/navigation";
 
+// Importer le logo
+import logo from "../assets/logo.png";
+
 export default function HomeScreen() {
   const navigation = useNavigation<NavigationProp>();
+  const username = "John"; // Remplacez par la logique pour obtenir le nom d'utilisateur
 
   return (
     <SafeAreaView style={styles.container}>
@@ -25,10 +30,15 @@ export default function HomeScreen() {
           <MaterialCommunityIcons name="message" size={24} color="#000" />
         </TouchableOpacity>
       </View>
-
       {/* Content */}
-      <View style={styles.content}>{/* Votre contenu principal ici */}</View>
-
+      <View style={styles.content}>
+        {/* Ajouter le logo et le texte */}
+        <View style={styles.logoContainer}>
+          <Image source={logo} style={styles.logo} />
+          <Text style={styles.greeting}>Bonjour {username}</Text>
+        </View>
+        {/* Votre contenu principal ici */}
+      </View>
       {/* Bottom Navigation */}
       <View style={styles.bottomNav}>
         <TouchableOpacity
@@ -95,6 +105,22 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: 16,
+    justifyContent: "center", // Centrer le contenu verticalement
+    alignItems: "center", // Centrer le contenu horizontalement
+  },
+  logoContainer: {
+    alignItems: "center",
+  },
+  logo: {
+    width: 120,
+    height: 120,
+    marginBottom: 16,
+    tintColor: "#999", // Rendre l  e logo légèrement plus foncé
+    resizeMode: "contain", // Éviter que le logo soit coupé
+  },
+  greeting: {
+    fontSize: 18,
+    fontWeight: "500",
   },
   bottomNav: {
     flexDirection: "row",
