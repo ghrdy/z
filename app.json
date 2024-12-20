@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Unify",
-    "slug": "Unify",
+    "slug": "unify",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -16,15 +16,14 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "bundleIdentifier": "com.unify.app",
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Unify needs access to location to show nearby runners.",
         "NSLocationAlwaysUsageDescription": "Unify needs access to location to show nearby runners."
-      },
-      "config": {
-        "googleMapsApiKey": "YOUR_IOS_GOOGLE_MAPS_API_KEY"
       }
     },
     "android": {
+      "package": "com.unify.app",
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -32,12 +31,7 @@
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION"
-      ],
-      "config": {
-        "googleMaps": {
-          "apiKey": "YOUR_ANDROID_GOOGLE_MAPS_API_KEY"
-        }
-      }
+      ]
     },
     "plugins": [
       [

@@ -1,38 +1,27 @@
 import { Asset } from 'expo-asset';
-import * as FileSystem from 'expo-file-system';
-import { preloadAssets, CORE_ASSETS } from '../constants/assets';
+import { Image } from 'react-native';
 
 export class AssetLoader {
-  static async initializeAssets() {
+  static async initializeAssets(): Promise<boolean> {
     try {
-      // Préchargement des assets React Native
-      await preloadAssets();
-      
-      // Préchargement des images de l'application
       const images = [
         require('../assets/icon.png'),
         require('../assets/splash.png'),
-        require('../assets/adaptive-icon.png'),
+        require('../assets/adaptive-icon.png')
       ];
 
-      const cacheImages = images.map(image => {
+      const loadPromises = images.map(async (image) => {
         if (typeof image === 'string') {
           return Image.prefetch(image);
-        } else {
-          return Asset.fromModule(image).downloadAsync();
         }
+        return Asset.fromModule(image).downloadAsync();
       });
 
-      await Promise.all(cacheImages);
-      
+      await Promise.all(loadPromises);
       return true;
     } catch (error) {
-      console.error('Error loading assets:', error);
+      console.error('Failed to load assets:', error);
       return false;
     }
-  }
-
-  static getAsset(key: keyof typeof CORE_ASSETS) {
-    return CORE_ASSETS[key];
   }
 }
